@@ -1,0 +1,104 @@
+.leftMenu {
+  width: 280px;
+  height: 100%;
+  min-height: 100vh;
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f1f1f1;
+  i {
+    cursor: pointer;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 30px;
+      display: flex;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+  }
+}
+
+.searchBox {
+  width: 100%;
+  height: 38px;
+  position: relative;
+  margin-top: 20px;
+  color: #848484;
+  overflow: hidden;
+  border-radius: 10px;
+  input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    padding-left: 45px;
+    color: #f1f1f1;
+    font-weight: bold;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #848484;
+    }
+  }
+}
+
+.searchBox {
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .leftMenu {
+    min-width: 64px;
+    width: 64px;
+    .searchBox {
+      display: none;
+    }
+    .trackList {
+      display: none;
+    }
+    .playListContainer {
+      display: none;
+    }
+    .menuContainer ul li {
+      margin: 25px 0;
+
+      a {
+        span {
+          display: none;
+        }
+
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

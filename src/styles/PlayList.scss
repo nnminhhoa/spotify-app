@@ -1,0 +1,64 @@
+.playListContainer {
+  margin: 15px 0px;
+  cursor: pointer;
+
+  .nameContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #848484;
+    margin-bottom: 10px;
+
+    p {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    i {
+      cursor: pointer;
+      color: #f1f1f1;
+    }
+  }
+  .playListScroll {
+    height: 125px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    .playLists {
+      display: flex;
+      align-items: center;
+      color: #848484;
+      margin: 10px 0;
+
+      .list {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        p {
+          font-size: 14px;
+          margin-left: 15px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: inline;
+        }
+        i {
+          display: flex;
+        }
+        &:hover {
+          color: #f1f1f1;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .trash {
+        margin-left: auto;
+        font-size: 16px;
+        display: flex;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: #f1f1f1;
+        }
+      }
+    }
+  }
+}
